@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1;
+  line-height: 10px;
 }
 
 textarea{
@@ -13,12 +13,57 @@ textarea{
   padding: 10px;
 }
 
+footer {
+  position: absolute;
+  bottom: 0em;
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  background-color: #560296;
+  padding: 15px;
+}
+
+header p {
+  font-size: 20px;
+  color: #560296;
+}
+
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: #e9d2fa;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  font-variant: small-caps;
+}
+
+.container {
+  border-radius: 10px;
+  border: #560296 solid;
+  height: 850px;
+  width: 1000px;
+}
+
+.time-item {
+  margin: 0;
+  padding: 0 3px 0 3px;
+  align-content: center;
+  text-align: right ;
+}
+
+.agenda {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  margin: 5px;
+  padding: 3px;
+}
+
+.agenda-item {
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  margin: 20px;
 }
 
 .description{
@@ -33,7 +78,8 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid black;
+  align-content: center;
 }
 
 .hour {
@@ -57,15 +103,18 @@ textarea{
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
+.save {
+  align-content: center;
+  margin: 5px;
 }
 
-.saveBtn i:hover {
+.saveBtn {
+  align-content: center;
+  margin: 3px;
+}
+
+.saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+  background: green;
 }
