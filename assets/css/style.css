@@ -14,7 +14,7 @@ textarea{
 }
 
 footer {
-  position: absolute;
+  position: -webkit-sticky;
   bottom: 0em;
   width: 100%;
   font-size: 18px;
@@ -28,6 +28,9 @@ header p {
   color: #560296;
 }
 
+h4 {
+  font-size: 18px;
+}
 .jumbotron {
   text-align: center;
   background-color: #e9d2fa;
@@ -48,22 +51,24 @@ header p {
   margin: 0;
   padding: 0 3px 0 3px;
   align-content: center;
-  text-align: right ;
+  text-align: right;
 }
 
 .agenda {
   width: 100%;
   display: flex;
-  height: 40px;
-  margin: 5px;
+  height: 100%;
+  margin: 0;
   padding: 3px;
 }
 
 .agenda-item {
   width: 100%;
   height: 100%;
-  padding: 3px;
-  margin: 20px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  position: relative;
 }
 
 .description{
@@ -111,10 +116,16 @@ header p {
 .saveBtn {
   align-content: center;
   margin: 3px;
+  background: #2cc9c9;
 }
 
 .saveBtn:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
-  background: green;
+  background: #179c3d;
 }
+
+@media (min-width: 576px){ 
+  .jumbotron {
+  padding: 1rem 2rem;
+}}

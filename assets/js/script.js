@@ -19,13 +19,46 @@ var weekday = today.getDay();
 
 $('#currentDay').text("Today is: " + weekdays[weekday] + " " + todayOutput);
 
-// Build Calendar Time Blocks
+// Get Input text with save button
+var agenda = JSON.parse(localStorage.getItem("agenda")) || {};
 
-// On click event for save button
-$(document).ready(function(){
-    $(".savebBtn").click(function(){
-      $("input:text").val();
-    });
-  });
+$(".saveBtn").on('click', function(event) {
+    // this gets closest class= row
+    var row = $(this).closest('.row');
+    // this looks with the row class the next input box
+    var input = row.find('input[type=text]');
+    // finds id of searched input
+    var inputID = input.attr('id');
+    agenda[inputID] = input.val();
+    // console.log(input.attr('class'), input.attr('id'), input.attr('type'), input.val());
+    localStorage.setItem("agenda", JSON.stringify(agenda));
+});
+
+// look for all input field with a text type & print on time row
+$(":text").each(function() {
+    const id = $(this).attr('id');
+    console.log(id + ': ', agenda[id]);
+    $(this).val(agenda[id]);
+});
 
 // Color code events: past, present, future
+var currentTime = moment();
+$(".time-item").each(function() {
+    // find all time-item elements
+    // loop through each time-item to get h4
+    // use moment to convert selected time
+    const timeName = $(this).find('h4');
+    var timeItem = timeName.text();
+    var inputTime = moment(timeItem, 'h:mm a');
+
+    var row = $(this).closest('.row');
+    // this looks with the row class the next input box
+    var input = row.find('input[type=text]');    
+    if(inputTime < currentTime){
+        input.css("background-color", "lightgrey")
+    } 
+    else if(inputTime > currentTime) {
+        input.css("background-color", "lightgreen")
+    } else {input.css("background-color", "tomato")}
+
+});
