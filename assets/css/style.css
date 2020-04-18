@@ -21,6 +21,7 @@ footer {
   color: white;
   background-color: #560296;
   padding: 15px;
+  margin-top: 20px;
 }
 
 header p {
@@ -43,7 +44,7 @@ h4 {
 .container {
   border-radius: 10px;
   border: #560296 solid;
-  height: 850px;
+  height: 825px;
   width: 1000px;
 }
 
