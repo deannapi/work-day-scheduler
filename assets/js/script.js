@@ -42,14 +42,14 @@ $(":text").each(function() {
 });
 
 // Color code events: past, present, future
-var currentTime = moment();
+var currentTime = moment().format('h a');
 $(".time-item").each(function() {
     // find all time-item elements
     // loop through each time-item to get h4
     // use moment to convert selected time
     const timeName = $(this).find('h4');
     var timeItem = timeName.text();
-    var inputTime = moment(timeItem, 'h:mm a');
+    var inputTime = moment(timeItem, "h:mm a").format('h a');
 
     var row = $(this).closest('.row');
     // this looks with the row class the next input box
@@ -58,7 +58,7 @@ $(".time-item").each(function() {
         input.css("background-color", "lightgrey")
     } 
     else if(inputTime > currentTime) {
-        input.css("background-color", "lightgreen")
-    } else {input.css("background-color", "tomato")}
+        input.css("background-color", "#81d64f")
+    } else {input.css("background-color", "#ed5a5a")}
 
 });
