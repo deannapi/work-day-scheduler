@@ -46,7 +46,6 @@ h4 {
   border: #560296 solid;
   height: 100%;
   width: 100%;
-  /* margin: 15px 10px 15px 10px; */
 }
 
 .time-item {
@@ -153,12 +152,55 @@ h4 {
     width: 100%;
   }
 
+  .jumbotron h1 {
+    font-size: 35px;
+  }
+
+  .jumbotron {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
   .container {
-    border-radius: 10px;
-    border: #560296 solid;
     height: 100%;
-    width: 300px;
-    margin: 0 10px 10px 20px;
+    width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .agenda {
+    width: 60%;
+    /* height: 80%; */
+    margin: 0;
   }
   
+  .agenda-item {
+    width: 230px;
+    font-size: 10px;
+  }
+
+  .time-item {
+    width: 20%;
+    display: grid;
+  }
+
+  .time-item h4 {
+    font-size: 12px;
+  }
+
+  .row {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: -webkit-inline-box;
+  }
+
+  .save {
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 20%;
+    height: 75px;
+    display: grid;
+  }
+
 }
