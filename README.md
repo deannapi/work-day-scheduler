@@ -18,5 +18,6 @@
 
 ## Website
 https://deannapi.github.io/work-day-scheduler/
+![work-day](worksch.jpg)
 
 ## Made by DeAnna Martinez
